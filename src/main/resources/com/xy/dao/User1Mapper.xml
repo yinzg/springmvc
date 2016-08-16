@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xy.dao.User1Mapper">
+
+    <insert id="insert" parameterType="com.xy.model.User1">
+        insert into test1
+        values (#{id},#{name})
+    </insert>
+
+    <select id="select" parameterType="String" resultType="com.xy.model.User1">
+        <![CDATA[
+            select id,name from test1 where name=#{name}
+        ]]>
+    </select>
+</mapper>
